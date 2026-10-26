@@ -74,9 +74,12 @@ window.gsap = gsap; window.ScrollTrigger = ScrollTrigger;
     s.addEventListener('dblclick', function(){ ox=oy=0; s.style.transition='transform .4s'; s.style.transform='rotate('+rot+'deg)'; setTimeout(function(){ s.style.transition=''; }, 420); });
   });
 
-  /* ---- compare slider ---- */
-  var cmp = document.getElementById('compare'), rng = document.getElementById('compareRange');
-  rng.addEventListener('input', function(){ cmp.style.setProperty('--x', rng.value+'%'); });
+  /* ---- sketch → wireframe tabs ---- */
+  var fbtn = document.querySelectorAll('[data-fid]'), fpan = document.querySelectorAll('[data-fid-panel]');
+  fbtn.forEach(function(b){ b.addEventListener('click', function(){ var k = b.getAttribute('data-fid');
+    fbtn.forEach(function(x){ x.setAttribute('aria-selected', x===b?'true':'false'); });
+    fpan.forEach(function(p){ p.hidden = p.getAttribute('data-fid-panel') !== k; });
+    if (window.gsap && !reduce) gsap.from('[data-fid-panel="'+k+'"] figure', {y:16, opacity:0, duration:.45, stagger:.08, ease:'power2.out'}); }); });
 
   /* ---- hi-fi switcher ---- */
   var data = [

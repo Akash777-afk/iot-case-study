@@ -287,30 +287,129 @@
 <section class="band" id="wireframes" style="background:var(--panel);border-block:1px solid var(--line)">
   <div class="rail">
     <div class="sec-head">
-      <div><span class="label"><span class="dot"></span>09 — Low → high fidelity</span><h2 style="margin-top:20px">Drag to see it <em>grow up.</em></h2></div>
-      <p>The low-fi grid fixed the order of questions: KPIs first, then status, type, applet and security. Drag the handle to compare it with the shipped screen.</p>
+      <div><span class="label"><span class="dot"></span>09 — Low → high fidelity</span><h2 style="margin-top:20px">From paper <em>to pixels.</em></h2></div>
+      <p>Every screen started as a pen sketch, then became a greyscale high-fidelity wireframe with real labels and layout before any color. Pick a screen to compare the two.</p>
     </div>
-    <div class="compare" id="compare">
-      <img src="assets/dashboard.jpg" alt="High-fidelity dashboard">
-      <span class="hifi-tag">HIGH FIDELITY</span>
-      <div class="lofi" aria-hidden="true">
-        <div class="sb"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="main"><div class="bar"></div><div class="kpis"><i></i><i></i><i></i><i></i><i></i></div><div class="panes"><div class="pane"></div><div class="pane"></div><div class="pane"></div><div class="pane d"></div></div></div>
-        <span class="tag">LOW FIDELITY</span>
+    <div class="flow-tabs" role="tablist" aria-label="Sketch and wireframe">
+      <button role="tab" aria-selected="true" data-fid="0">Analytics</button>
+      <button role="tab" aria-selected="false" data-fid="1">Device detail</button>
+      <button role="tab" aria-selected="false" data-fid="2">Bulk update</button>
+      <button role="tab" aria-selected="false" data-fid="3">Circle distribution</button>
+    </div>
+
+    <div class="fid" data-fid-panel="0">
+      <figure class="fid-sketch"><img src="assets/sketches/analytics.jpg" alt="Pen sketch of the analytics page: sidebar, filter bar for customers, location and time, and a grid of chart cards with download icons" loading="lazy"><span class="fid-tag">LOW FIDELITY · SKETCH</span></figure>
+      <figure class="fid-wire"><div class="hw" aria-hidden="true"><div class="hw-in">
+        <aside class="hw-sb"><b class="hw-logo">IoT NOC</b><span>Dashboard</span><span>Devices</span><span>SIM Applet</span><span class="on">Analytics</span><span class="hw-live"><i></i>Live update</span></aside>
+        <div class="hw-main">
+          <div class="hw-top"><b>Analytics</b><span class="hw-btn ghost">Export all</span></div>
+          <div class="hw-filters"><span>Customer</span><span>Device type</span><span>Location</span><span>Time · 24h</span></div>
+          <div class="hw-grid">
+            <div class="hw-card"><div class="hw-ch">Device status<u></u></div><div class="hw-pie"></div></div>
+            <div class="hw-card"><div class="hw-ch">Device type<u></u></div><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M6 40V22h8v18M22 40V10h8v30M38 40V26h8v14M54 40V16h8v24M70 40V30h8v10M86 40V20h8v20"/></svg></div>
+            <div class="hw-card"><div class="hw-ch">Top customers<u></u></div><div class="hw-hb"><i style="width:92%"></i><i style="width:70%"></i><i style="width:55%"></i><i style="width:34%"></i></div></div>
+            <div class="hw-card"><div class="hw-ch">Data usage<u></u></div><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path class="ln" d="M0 30 10 18 20 24 30 12 40 20 50 8 60 22 70 14 80 26 90 10 100 18"/></svg></div>
+            <div class="hw-card"><div class="hw-ch">Signal trend<u></u></div><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path class="ar" d="M0 40V26L15 22 30 28 45 16 60 20 75 12 90 18 100 14V40Z"/><path class="ln" d="M0 26 15 22 30 28 45 16 60 20 75 12 90 18 100 14"/></svg></div>
+            <div class="hw-card"><div class="hw-ch">Applet versions<u></u></div><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M8 40V8h14v32M30 40V24h14v16M52 40V30h14v10M74 40V34h14v6"/></svg></div>
+            <div class="hw-card"><div class="hw-ch">Circles<u></u></div><div class="hw-hb"><i style="width:80%"></i><i style="width:62%"></i><i style="width:48%"></i><i style="width:30%"></i></div></div>
+            <div class="hw-card"><div class="hw-ch">Security<u></u></div><div class="hw-pie ring"></div></div>
+            <div class="hw-card"><div class="hw-ch">Alerts by hour<u></u></div><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M4 40V30h6v10M14 40V26h6v14M24 40V32h6v8M34 40V14h6v26M44 40V20h6v20M54 40V28h6v12M64 40V18h6v22M74 40V34h6v6M84 40V24h6v16M94 40V30h6v10"/></svg></div>
+          </div>
+        </div>
+      </div></div><span class="fid-tag dark">HIGH FIDELITY · WIREFRAME</span></figure>
+      <div class="lofi-notes">
+        <div><b>Filters above everything</b><p>Customer, device type, location and time sit on top, so one change updates every card.</p></div>
+        <div><b>Nine cards, one grid</b><p>Each card answers one question, in a chart picked for that data.</p></div>
+        <div><b>Download on each card</b><p>Every card exports its own live data, with no trip to a reports page.</p></div>
+        <div><b>Live update in reach</b><p>The sidebar footer shows when data last refreshed.</p></div>
       </div>
-      <div class="handle"></div>
-      <input type="range" id="compareRange" min="0" max="100" value="50" aria-label="Compare low and high fidelity">
     </div>
-    <div class="lofi-notes">
-      <div><b>Layout first</b><p>Boxes and lines only, so the review is about order, not color.</p></div>
-      <div><b>Five KPIs on top</b><p>Each one links straight to the filtered list behind it.</p></div>
-      <div><b>Four panes below</b><p>Status, type, applet and security — the four questions of a shift.</p></div>
-      <div><b>Cheap to change</b><p>Three rounds of operator feedback before any pixel polish.</p></div>
+
+    <div class="fid" data-fid-panel="1" hidden>
+      <figure class="fid-sketch"><img src="assets/sketches/device-detail.jpg" alt="Pen sketch of the device detail page: device name and config, SIM applet details, network issue, data security and a network KPI snapshot" loading="lazy"><span class="fid-tag">LOW FIDELITY · SKETCH</span></figure>
+      <figure class="fid-wire"><div class="hw" aria-hidden="true"><div class="hw-in">
+        <aside class="hw-sb"><b class="hw-logo">IoT NOC</b><span>Dashboard</span><span class="on">Devices</span><span>SIM Applet</span><span>Analytics</span><span class="hw-live"><i></i>Live update</span></aside>
+        <div class="hw-main">
+          <div class="hw-top"><b>SIM Applet</b><span class="hw-btn ghost">← Back to dashboard</span></div>
+          <div class="hw-crumb">Devices / Device detail</div>
+          <div class="hw-dd">
+            <div class="hw-col">
+              <div class="hw-box hw-hero"><b>Smart meter · DEV-004812</b><small>Customer · Circle · Status</small></div>
+              <div class="hw-box"><h6>Configuration</h6><dl><dt>IMEI</dt><dd></dd><dt>ICCID</dt><dd></dd><dt>Firmware</dt><dd></dd><dt>Last seen</dt><dd></dd></dl></div>
+              <div class="hw-box"><h6>Network KPI snapshot</h6><div class="hw-kpis"><span>RSSI<i></i></span><span>Latency<i></i></span><span>Uptime<i></i></span><span>Data<i></i></span></div></div>
+            </div>
+            <div class="hw-col">
+              <div class="hw-box grow"><h6>SIM applet details</h6><div class="hw-pills"><span>Installed</span><span>Target</span><span>Status</span><span>Last update</span><span>Eligible</span><span>Rollback</span></div></div>
+              <div class="hw-box hw-row"><h6>Network issue</h6><i></i></div>
+              <div class="hw-box hw-row"><h6>Data security</h6><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div></div><span class="fid-tag dark">HIGH FIDELITY · WIREFRAME</span></figure>
+      <div class="lofi-notes">
+        <div><b>Name first</b><p>Every support call starts with “which device?”, so its name and config lead the page.</p></div>
+        <div><b>Applet beside network</b><p>Version and network health sit side by side, so a failed update is easy to tell apart from bad signal.</p></div>
+        <div><b>Issues in their own rows</b><p>Network issue and data security get one row each, which stays calm when there is nothing to report.</p></div>
+        <div><b>A way back</b><p>“Back to dashboard” stays top right, so a deep dive never strands the operator.</p></div>
+      </div>
     </div>
-    <div class="wf-row" aria-hidden="false">
-      <div><div class="wf"><i style="height:10%;width:40%"></i><div class="r" style="flex:1"><i style="flex:1"></i><i style="flex:1"></i><i style="flex:1"></i></div><i style="flex:3"></i></div><div class="wf-cap">Devices · table + filters</div></div>
-      <div><div class="wf"><i style="height:10%;width:50%"></i><div class="r" style="height:18%"><i style="flex:1"></i><i style="flex:1"></i><i style="flex:1"></i><i style="flex:1"></i></div><i style="flex:1"></i><i style="height:16%"></i><i style="height:16%"></i></div><div class="wf-cap">SIM Applet · versions + queue</div></div>
-      <div><div class="wf"><div class="r" style="height:12%"><i style="flex:1"></i><i style="flex:1"></i><i style="flex:1"></i><i style="flex:1"></i></div><div class="r" style="flex:1"><i style="flex:1"></i><i style="flex:1"></i><i style="flex:1"></i></div><div class="r" style="flex:1"><i style="flex:1"></i><i style="flex:1"></i><i style="flex:1"></i></div></div><div class="wf-cap">Analytics · filter bar + 9 cards</div></div>
+
+    <div class="fid" data-fid-panel="2" hidden>
+      <figure class="fid-sketch"><img src="assets/sketches/bulk-update.jpg" alt="Pen sketch of bulk update processing: a list of devices requiring an applet update with an update button per row, and a modal with eligible and selected devices" loading="lazy"><span class="fid-tag">LOW FIDELITY · SKETCH</span></figure>
+      <figure class="fid-wire"><div class="hw" aria-hidden="true"><div class="hw-in">
+        <aside class="hw-sb"><b class="hw-logo">IoT NOC</b><span>Dashboard</span><span>Devices</span><span class="on">SIM Applet</span><span>Analytics</span><span class="hw-live"><i></i>Live update</span></aside>
+        <div class="hw-main">
+          <div class="hw-top"><b>Devices requiring applet update</b><span class="hw-btn">Bulk update</span></div>
+          <div class="hw-crumb">37,088 devices on an older version</div>
+          <div class="hw-table">
+            <div class="hw-tr th"><s></s><span>Device</span><span>Device ID</span><span>Customer</span><span>Version</span><span></span></div>
+            <div class="hw-tr"><s class="on"></s><i></i><i></i><i></i><span>v1.8</span><em>Update</em></div>
+            <div class="hw-tr"><s class="on"></s><i></i><i></i><i></i><span>v1.9</span><em>Update</em></div>
+            <div class="hw-tr"><s></s><i></i><i></i><i></i><span>v1.8</span><em>Update</em></div>
+            <div class="hw-tr"><s class="on"></s><i></i><i></i><i></i><span>v2.0</span><em>Update</em></div>
+            <div class="hw-tr"><s></s><i></i><i></i><i></i><span>v1.9</span><em>Update</em></div>
+            <div class="hw-tr"><s></s><i></i><i></i><i></i><span>v2.0</span><em>Update</em></div>
+          </div>
+          <div class="hw-modal">
+            <div class="hw-ch">Bulk update<b>×</b></div>
+            <div class="hw-stats"><span><small>Eligible devices</small>1,000</span><span><small>Selected devices</small>240</span></div>
+            <div class="hw-mini"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="hw-actions"><span class="hw-btn ghost">Cancel</span><span class="hw-btn">Update 240</span></div>
+          </div>
+        </div>
+      </div></div><span class="fid-tag dark">HIGH FIDELITY · WIREFRAME</span></figure>
+      <div class="lofi-notes">
+        <div><b>List before action</b><p>Device, ID and customer come first, so operators see what they are about to touch.</p></div>
+        <div><b>One or many</b><p>Each row has its own Update button, and “Bulk update” sits top right for the whole selection.</p></div>
+        <div><b>Confirm in a modal</b><p>Eligible and selected counts are shown before anything is pushed to a device.</p></div>
+        <div><b>Capped by design</b><p>At most 1,000 devices per session, so a bad build can’t reach the whole fleet.</p></div>
+      </div>
+    </div>
+
+    <div class="fid" data-fid-panel="3" hidden>
+      <figure class="fid-sketch"><img src="assets/sketches/circle-distribution.jpg" alt="Pen sketch of circle-wise customer distribution: Delhi north, Mumbai and Pune west, Kolkata east, Chennai, Bengaluru and Hyderabad south" loading="lazy"><span class="fid-tag">LOW FIDELITY · SKETCH</span></figure>
+      <figure class="fid-wire"><div class="hw" aria-hidden="true"><div class="hw-in">
+        <aside class="hw-sb"><b class="hw-logo">IoT NOC</b><span>Dashboard</span><span>Devices</span><span>SIM Applet</span><span class="on">Analytics</span><span class="hw-live"><i></i>Live update</span></aside>
+        <div class="hw-main">
+          <div class="hw-top"><b>Circle-wise customer distribution</b><span class="hw-btn ghost">Time · 24h</span></div>
+          <div class="hw-circ">
+            <div class="hw-compass">
+              <span class="ax x"></span><span class="ax y"></span>
+              <div class="nd n"><small>North</small>Delhi<i></i></div>
+              <div class="nd w"><small>West</small>Mumbai · Pune<i></i></div>
+              <div class="nd e"><small>East</small>Kolkata<i></i></div>
+              <div class="nd s"><small>South</small>Chennai · Bengaluru · Hyderabad<i></i></div>
+            </div>
+            <div class="hw-box hw-legend"><h6>Customers by circle</h6><div class="hw-hb"><i style="width:88%"></i><i style="width:64%"></i><i style="width:46%"></i><i style="width:28%"></i></div><small>Click a circle to drill into its BTS sites</small></div>
+          </div>
+        </div>
+      </div></div><span class="fid-tag dark">HIGH FIDELITY · WIREFRAME</span></figure>
+      <div class="lofi-notes">
+        <div><b>Read it like a map</b><p>Seven cities sit in Airtel’s four circles, laid out north, south, east and west.</p></div>
+        <div><b>Circle, then city</b><p>Each node names its circle first and its cities second, matching how the NOC talks.</p></div>
+        <div><b>Counts beside the map</b><p>A ranked list gives exact numbers where the compass only gives position.</p></div>
+        <div><b>Room to drill down</b><p>This sketch became the circle → BTS drill-down in the shipped Analytics screen.</p></div>
+      </div>
     </div>
 
     <div class="analysis-title" style="margin-top:72px"><span class="label"><span class="dot"></span>10 — High-fidelity screens</span></div>

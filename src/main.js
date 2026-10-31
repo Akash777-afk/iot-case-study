@@ -62,6 +62,7 @@ window.gsap = gsap; window.ScrollTrigger = ScrollTrigger;
   /* ---- flow tabs ---- */
   var ftabs = document.querySelectorAll('[data-flow]');
   ftabs.forEach(function(b){ b.addEventListener('click', function(){ ftabs.forEach(function(x){ x.setAttribute('aria-selected', x===b?'true':'false'); document.getElementById(x.getAttribute('data-flow')).hidden = x!==b; });
+    document.querySelectorAll('[data-flow-notes]').forEach(function(n){ n.hidden = n.getAttribute('data-flow-notes') !== b.getAttribute('data-flow'); });
     if (window.gsap && !reduce) gsap.from('#'+b.getAttribute('data-flow')+' .flow > *', {y:16, duration:.45, stagger:.05, ease:'power2.out'}); }); });
 
   /* ---- draggable stickies ---- */
@@ -83,11 +84,11 @@ window.gsap = gsap; window.ScrollTrigger = ScrollTrigger;
 
   /* ---- hi-fi switcher ---- */
   var data = [
-    {u:'iot-dashboard-snowy.vercel.app/#/login', c:[['Circuit backdrop','The board pattern ties the login to the network the operator watches.'],['One focused card','User ID, password with show/hide, and a clear error message.'],['Version tag','“SIM Applet Operations v2.1” tells support which build is live.']]},
-    {u:'iot-dashboard-snowy.vercel.app/#/', c:[['Five KPI cards','Each colored underline maps to one status and links to its list.'],['Blue-only charts','Status and type use tonal blues so they never read as alerts.'],['Security donut','99.3% whitelisted, with 702 blacklisted devices one click away.']]},
-    {u:'iot-dashboard-snowy.vercel.app/#/devices', c:[['Virtualized table','Only visible rows render, so 100K devices scroll smoothly.'],['Search, filter, export','Every filter carries into the CSV, so export matches the screen.'],['Tabs, not pages','Onboarding and Security live here as tabs; old links redirect.']]},
-    {u:'iot-dashboard-snowy.vercel.app/#/sim-applet', c:[['Version at a glance','Installed v2.1.0 vs target, 63,026 up to date, 37,088 waiting.'],['Disabled, not hidden','Import and Rollout stay visible for the future workflow.'],['Safe bulk update','Capped at 1,000 devices per session with compatibility shown.']]},
-    {u:'iot-dashboard-snowy.vercel.app/#/analytics', c:[['Four instant filters','Customer, device type, location and time drive all nine cards.'],['Circle → BTS drill','Click a circle to see each BTS, its problem and affected meters.'],['AI insights tab','A natural-language box that says honestly it is a preview.']]}
+    {u:'iot-dashboard-snowy.vercel.app/#/login', c:[['Network-themed background','The circuit-board pattern links the login screen to the network operators monitor.'],['One simple form','User ID, password with show/hide, and a clear error message.'],['Version label','“SIM Applet Operations v2.1” tells support teams which version is running.']]},
+    {u:'iot-dashboard-snowy.vercel.app/#/', c:[['Five summary cards','Each card’s colored line stands for one status, and the card links to the matching device list.'],['Blue charts for data','Status and device-type charts use shades of blue, so they are not mistaken for alerts.'],['Security overview','99.3% of devices are whitelisted (approved); the 702 blacklisted (blocked) devices are one click away.']]},
+    {u:'iot-dashboard-snowy.vercel.app/#/devices', c:[['Fast device table','Only the rows on screen are drawn, so scrolling through 100K devices stays smooth.'],['Search, filter, export','The CSV export keeps the same filters as the screen, so the file matches what you see.'],['Tabs instead of pages','Onboarding and Security are tabs on this page; old links redirect here.']]},
+    {u:'iot-dashboard-snowy.vercel.app/#/sim-applet', c:[['Versions at a glance','Compares each device’s installed version with the target v2.1.0: 63,026 are up to date and 37,088 need an update.'],['Disabled, not hidden','Import and Rollout buttons are visible but disabled, because those workflows are planned for later.'],['Safer bulk updates','Up to 1,000 devices per session, with compatibility shown before confirming.']]},
+    {u:'iot-dashboard-snowy.vercel.app/#/analytics', c:[['Four filters','Customer, device type, location and time update all nine charts at once.'],['Region → network site','Click a region (circle) to see each network site (BTS), its problem and the affected meters.'],['AI insights (preview)','A box for asking questions in plain words. It is clearly labeled as a preview and is not connected to a backend yet.']]}
   ];
   var sbtn = [].slice.call(document.querySelectorAll('[data-shot]')), imgs = document.querySelectorAll('#shots img'), url = document.getElementById('shotUrl'), co = document.getElementById('callouts'), cur = 0, timer;
   function show(i, user){ cur = i; sbtn.forEach(function(b,k){ b.setAttribute('aria-selected', k===i?'true':'false'); var t=b.querySelector('.tick'); t.style.transition='none'; t.style.width='0';

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>IoT Observability Case Study</title>
-  <meta name="description" content="Case study: IoT Observability, a SIM Applet operations dashboard by Akash Ganapathy.">
+  <title>IoT Device Monitoring Case Study</title>
+  <meta name="description" content="Case study: an IoT device monitoring and management dashboard for telecom network operations, designed and built by Akash Ganapathy.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -17,10 +17,10 @@
       <li><a href="#about">About</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#research">Research</a></li>
-      <li><a href="#market">Market</a></li>
+      <li><a href="#market">Competitors</a></li>
       <li><a href="#flows">Flows</a></li>
       <li><a href="#wireframes">Wireframes</a></li>
-      <li><a href="#ui">UI</a></li>
+      <li><a href="#ui">Design</a></li>
     </ul>
     <a class="nav-cta" href="Akash-Ganapathy-Resume.pdf" download="Akash-Ganapathy-Resume.pdf">Download resume ↓</a>
   </div>
@@ -30,28 +30,28 @@
 <header class="band hero" id="top">
   <canvas id="net" aria-hidden="true"></canvas>
   <div class="rail hero-grid">
-    <span class="label"><span class="dot"></span>Case study · Operations dashboard · 2026</span>
-    <h1 class="split"><span class="outline">IoT</span><br>Observ<span class="g">a</span>bility</h1>
+    <span class="label"><span class="dot"></span>UI/UX case study · Telecom operations dashboard · 2026</span>
+    <h1 class="split"><span class="outline">IoT</span> Device<br>Monit<span class="g">o</span>ring</h1>
     <div class="hero-sub">
-      <p>One command center for a 100,114-device IoT fleet. Operators see fleet health, roll out SIM Applet updates safely and trace a failing cell tower in three clicks.</p>
+      <p>A dashboard for monitoring and managing IoT devices on a telecom network. It helps NOC (Network Operations Center) engineers check the health of 100,114 connected devices, find connectivity problems and the customers they affect, and manage SIM Applet updates, all in one place instead of one huge spreadsheet.</p>
       <div class="hero-ctas">
         <a class="btn solid" href="https://iot-dashboard-snowy.vercel.app/#/login" target="_blank" rel="noopener">Open live demo ↗</a>
-        <a class="btn" href="#about">Read the story ↓</a>
+        <a class="btn" href="#about">Read the case study ↓</a>
       </div>
     </div>
     <dl class="meta">
-      <div><dt>Role</dt><dd>UI/UX + Frontend</dd></div>
+      <div><dt>Role</dt><dd>UI/UX Design + Frontend</dd></div>
       <div><dt>Client</dt><dd>TierOne · Airtel IoT NOC</dd></div>
       <div><dt>Timeline</dt><dd>5 weeks · Sep–Oct 2026</dd></div>
-      <div><dt>Stack</dt><dd>Figma · React · TypeScript</dd></div>
+      <div><dt>Tools</dt><dd>Figma · React · TypeScript</dd></div>
     </dl>
     <div class="stage">
-      <div class="chip c1"><i style="background:var(--amber)"></i><div><small>Out of reach</small><b class="tab-nums">8,103</b></div></div>
+      <div class="chip c1"><i style="background:var(--amber)"></i><div><small>Out of Reach</small><b class="tab-nums">8,103</b></div></div>
       <div class="chip c2"><i style="background:var(--signal)"></i><div><small>Whitelisted</small><b class="tab-nums">99.3%</b></div></div>
       <div class="chip c3"><i style="background:var(--volt)"></i><div><small>Need applet update</small><b class="tab-nums">37,088</b></div></div>
       <div class="chip c4"><i style="background:var(--alert)"></i><div><small>Blacklisted</small><b class="tab-nums">702</b></div></div>
       <div class="laptop" id="laptop">
-        <div class="lid"><div class="cam"></div><img src="assets/dashboard.jpg" alt="IoT Observability dashboard: KPI cards, device status and device type distribution"></div>
+        <div class="lid"><div class="cam"></div><img src="assets/analytics.jpg" alt="Analytics screen of the IoT device monitoring dashboard: network quality, issues by region, affected customers and network trend charts"></div>
         <div class="base"></div>
       </div>
     </div>
@@ -67,19 +67,27 @@
 
 <section class="band" id="about">
   <div class="rail">
-    <span class="label"><span class="dot"></span>01 — About</span>
-    <p class="statement" style="margin-top:28px">A telecom NOC watches <mark>smart meters, payment soundboxes and connected cars</mark> on one cellular network. I designed and built the screen they <span class="u">open first every shift.</span></p>
+    <span class="label"><span class="dot"></span>01 — About the project</span>
+    <p class="statement" style="margin-top:28px">Designed a centralized dashboard for <mark>NOC teams</mark> to monitor <span class="u">smart meters, payment devices, and connected cars.</span></p>
+    <p style="color:var(--muted);max-width:70ch;margin-top:24px">My role: research, wireframes and UI in Figma, plus the React + TypeScript front end.</p>
     <div class="bento">
       <div class="tile t-a">
-        <div><span class="label">Devices in view</span><div class="big tab-nums" data-count="100114">100,114</div><p class="cap">Reduced from a 1,000,000-row master file with a stratified, validated sample.</p></div>
+        <div><span class="label">Devices in the dataset</span><div class="big tab-nums" data-count="100114">100,114</div><p class="cap">Over 100,000 devices tracked in one master file.</p></div>
         <div class="devlist"><span class="pill g">Smart Meter 48%</span><span class="pill">POS / Soundbox 14%</span><span class="pill">Connected Vehicles 12%</span><span class="pill">Vehicle Tracking 12%</span><span class="pill">Connected Cars 9%</span><span class="pill">POS / Payment 5%</span></div>
       </div>
-      <div class="tile t-b"><span class="label">Enterprise customers</span><div class="big tab-nums" data-count="12">12</div><p class="cap">Utilities, fintech and automotive: Paytm, Torrent Power, Jio Power, Adani, Hero MotoCorp, Kia and more.</p></div>
-      <div class="tile t-c"><span class="label">Cities</span><div class="big tab-nums" data-count="7">7</div><p class="cap">Grouped into 4 Airtel circles.</p></div>
+      <div class="tile t-b"><span class="label">Enterprise customers</span><div class="big tab-nums" data-count="12">12</div><p class="cap">Including Paytm, Torrent Power, Jio Power, Adani, Hero MotoCorp and Kia.</p></div>
+      <div class="tile t-c"><span class="label">Cities</span><div class="big tab-nums" data-count="7">7</div><p class="cap">Grouped into 4 Airtel circles (regions).</p></div>
       <div class="tile t-d"><span class="label">Fields</span><div class="big tab-nums" data-count="22">22</div><p class="cap">per device</p></div>
       <div class="tile t-e"><span class="label">Device status</span><div class="mini-bars" aria-hidden="true"><i style="height:100%"></i><i style="height:24%;background:var(--ice)"></i><i style="height:13%;background:var(--amber)"></i><i style="height:4%;background:var(--alert)"></i></div><p class="cap">65.7% Active · 15.7% Degraded</p></div>
-      <div class="tile t-f"><span class="label">Screens shipped</span><div class="big tab-nums" data-count="9">9</div><p class="cap">From login to AI insights.</p></div>
-      <div class="tile t-g"><span class="label">Chart types</span><div class="big tab-nums" data-count="11">11</div><p class="cap">Hand-built in SVG, no chart library.</p></div>
+      <div class="tile t-f"><span class="label">Screens built</span><div class="big tab-nums" data-count="9">9</div><p class="cap">From login to AI insights (preview).</p></div>
+      <div class="tile t-g"><span class="label">Chart types</span><div class="big tab-nums" data-count="11">11</div><p class="cap">Hand-built in SVG.</p></div>
+    </div>
+
+    <div class="analysis-title"><span class="label"><span class="dot"></span>Key concepts in plain words</span></div>
+    <div class="qual" style="margin-top:0">
+      <div class="card"><span class="k">A</span><h3>NOC engineers</h3><p>They watch the network 24/7, find out why devices fail and raise tickets.</p></div>
+      <div class="card"><span class="k">B</span><h3>SIM Applets</h3><p>Small programs on the SIM card, not the device. Operators manage SIMs remotely with them, so older versions need updates.</p></div>
+      <div class="card"><span class="k">C</span><h3>Region → site → device</h3><p>Circles are large regions. Each has cell sites with a BTS (Base Transceiver Station), the radio equipment devices connect to.</p></div>
     </div>
   </div>
 </section>
@@ -87,16 +95,16 @@
 <section class="band" id="process" style="background:var(--panel);border-block:1px solid var(--line)">
   <div class="rail">
     <div class="sec-head">
-      <div><span class="label"><span class="dot"></span>02 — Design process</span><h2 style="margin-top:20px">Five sprints, <em>one signal</em> path.</h2></div>
-      <p>Each week ended with something operators could react to: a data profile, a problem frame, a flow, a clickable prototype, then working code.</p>
+      <div><span class="label"><span class="dot"></span>02 — Design process</span><h2 style="margin-top:20px">My Design and <em>Development Process</em></h2></div>
+      <p>Five weeks, with something to show operators at the end of each one.</p>
     </div>
     <div class="process" id="processRow">
       <div class="wire"><i id="wireFill"></i></div>
-      <article class="step"><span class="ix">01</span><span class="wk">Week 1</span><h3>Empathize</h3><p>Shadowed NOC shifts and profiled all 22 columns of the master dataset.</p><ul><li>Interviews</li><li>Data profile</li></ul></article>
-      <article class="step"><span class="ix">02</span><span class="wk">Week 2</span><h3>Define</h3><p>Framed one question: which fault is hurting which customer, right now?</p><ul><li>HMW</li></ul></article>
-      <article class="step"><span class="ix">03</span><span class="wk">Week 2–3</span><h3>Ideate</h3><p>Compared tools, ran a SWOT and drew the task flows.</p><ul><li>SWOT</li><li>Task flows</li><li>IA</li></ul></article>
-      <article class="step"><span class="ix">04</span><span class="wk">Week 3–4</span><h3>Prototype</h3><p>Low-fi grids, then high-fidelity screens on one token system in Figma.</p><ul><li>Wireframes</li><li>Tokens</li></ul></article>
-      <article class="step"><span class="ix">05</span><span class="wk">Week 4–5</span><h3>Build &amp; test</h3><p>Coded in React + TypeScript, tested with operators, shipped on Vercel.</p><ul><li>React</li><li>Usability</li></ul></article>
+      <article class="step"><span class="ix">01</span><span class="wk">Week 1</span><h3>Understand users and data</h3><p>Sat in on NOC shifts, ran interviews and reviewed all 22 data columns.</p><ul><li>Interviews</li><li>Data review</li></ul></article>
+      <article class="step"><span class="ix">02</span><span class="wk">Week 2</span><h3>Define the main problem</h3><p>Which problem is affecting which customer, right now?</p><ul><li>Problem statement</li></ul></article>
+      <article class="step"><span class="ix">03</span><span class="wk">Week 2–3</span><h3>Plan the structure</h3><p>Compared tools, listed strengths and risks, mapped journeys and pages.</p><ul><li>Competitors</li><li>SWOT</li><li>Task flows</li><li>Navigation</li></ul></article>
+      <article class="step"><span class="ix">04</span><span class="wk">Week 3–4</span><h3>Wireframes and final UI</h3><p>Sketches, grey wireframes, then final designs in Figma.</p><ul><li>Wireframes</li><li>Design system</li></ul></article>
+      <article class="step"><span class="ix">05</span><span class="wk">Week 4–5</span><h3>Build and test</h3><p>Built in React + TypeScript, tested with operators, published on Vercel.</p><ul><li>React</li><li>Usability testing</li></ul></article>
     </div>
   </div>
 </section>
@@ -104,72 +112,74 @@
 <section class="band" id="problem">
   <div class="rail">
     <div class="sec-head">
-      <div><span class="label"><span class="dot"></span>03 — Problem &amp; solution</span><h2 style="margin-top:20px">A million rows. <em>One answer.</em></h2></div>
-      <p>Operators had all the data and none of the answers. The fix was less about adding features and more about the order in which questions get answered.</p>
+      <div><span class="label"><span class="dot"></span>03 — Problem &amp; solution</span><h2 style="margin-top:20px">Simplifying IoT <em>Device Monitoring</em></h2></div>
+      <p>Operators had the data, but no quick way to get answers from it.</p>
     </div>
     <div class="ps">
       <article class="ps-card prob">
-        <span class="label"><span class="dot"></span>Problem statement</span>
-        <h3>Every incident started with a spreadsheet.</h3>
-        <p style="color:#C4D3EA">NOC operators tracked 1,000,000 IoT devices in one 22-column Excel file. Finding which tower was failing which customer took hours.</p>
-        <ul class="ps-list"><li>One bad BTS showed up as hundreds of separate red rows.</li><li>“Status” and “applet update status” looked alike and got mixed up.</li><li>Bulk applet updates had no limit, preview or confirmation.</li></ul>
+        <span class="label"><span class="dot"></span>The problem</span>
+        <h3>Every investigation started in a spreadsheet.</h3>
+        <p style="color:#C4D3EA">100,000 devices in one 22-column Excel file. Tracing a faulty site to a customer took hours.</p>
+        <ul class="ps-list"><li>One faulty site showed up as hundreds of red rows.</li><li>Device status and SIM Applet update status were easily confused.</li><li>Updates had no limit, preview or confirmation.</li></ul>
       </article>
       <article class="ps-card sol">
-        <span class="label"><span class="dot"></span>Solution statement</span>
-        <h3>See it, trace it, fix it — in one place.</h3>
-        <p>A dashboard that answers “is anything wrong?” in five seconds, then lets operators drill from a circle to a BTS to the exact devices, and run capped, confirmed SIM Applet updates on real data.</p>
-        <ul class="ps-list"><li>Fleet health on one screen, numbers that animate when data changes.</li><li>Circle → BTS → device drill-down with customer impact.</li><li>Bulk updates capped at 1,000 devices per session.</li></ul>
+        <span class="label"><span class="dot"></span>The solution</span>
+        <h3>Monitor, investigate and manage devices in one place.</h3>
+        <p>Designed to show within seconds if anything is wrong, then narrow it down from region to site to device.</p>
+        <ul class="ps-list"><li>Overall device health on one screen.</li><li>Region → site → device drill-down, with affected customers.</li><li>Updates capped at 1,000 devices per session.</li></ul>
       </article>
     </div>
     <div class="ba">
-      <div><small>Find the failing BTS</small><strong><span class="from">~2 hrs</span> → 3 clicks</strong></div>
-      <div><small>What operators scan</small><strong><span class="from">1M rows</span> → 9 screens</strong></div>
-      <div><small>Bulk update guardrail</small><strong><span class="from">none</span> → 1,000 / session</strong></div>
+      <div><small>Find the faulty network site</small><strong><span class="from">~2 hrs</span> → 3 clicks</strong></div>
+      <div><small>What operators look through</small><strong><span class="from">100K rows</span> → 9 screens</strong></div>
+      <div><small>Bulk update safety limit</small><strong><span class="from">none</span> → 1,000 / session</strong></div>
     </div>
+    <p class="flow-note">“~2 hrs” is survey-reported. “3 clicks” is the prototype path, not a measured time.</p>
   </div>
 </section>
 
 <section class="band" id="research" style="background:var(--panel);border-block:1px solid var(--line)">
   <div class="rail">
     <div class="sec-head">
-      <div><span class="label"><span class="dot"></span>04 — User interview &amp; data collection</span><h2 style="margin-top:20px">Listening to <em>the night shift.</em></h2></div>
-      <p>8 one-on-one interviews with operators and network engineers, a 32-person survey across operations, and a column-by-column profile of the master dataset.</p>
+      <div><span class="label"><span class="dot"></span>04 — User research &amp; data collection</span><h2 style="margin-top:20px">Understanding <em>User Challenges</em></h2></div>
+      <p>8 interviews, a 32-response survey and a review of the master dataset.</p>
     </div>
     <div class="res-top">
       <div class="card" style="background:var(--navy)">
-        <h3>Question formation</h3>
-        <p>Every interview followed the same four blocks, so answers could be compared.</p>
-        <ul class="qlist"><li><span>Q1</span>Role, shift and daily routine</li><li><span>Q2</span>How an incident gets triaged today</li><li><span>Q3</span>Tools, sheets and workarounds used</li><li><span>Q4</span>What a better tool would change</li></ul>
+        <h3>Interview questions</h3>
+        <p>Four fixed topics, so answers could be compared.</p>
+        <ul class="qlist"><li><span>Q1</span>Role, shift and routine</li><li><span>Q2</span>How problems are investigated</li><li><span>Q3</span>Tools and workarounds</li><li><span>Q4</span>What a better tool should change</li></ul>
       </div>
       <div class="card">
-        <h3>Data collection</h3>
-        <p>I recorded role, experience and shift for segmenting, then how often each problem type appears, how long root-cause takes and which features people would use first.</p>
-        <div class="stats3"><div><b class="tab-nums" data-count="8">8</b><small>Interviews</small></div><div><b class="tab-nums" data-count="32">32</b><small>Survey replies</small></div><div><b>1M</b><small>Rows profiled</small></div></div>
+        <h3>What I collected</h3>
+        <p>Role, experience, shift, how often problems happen, time to find a cause and most-wanted features.</p>
+        <div class="stats3"><div><b class="tab-nums" data-count="8">8</b><small>Interviews</small></div><div><b class="tab-nums" data-count="32">32</b><small>Survey responses</small></div><div><b>100K</b><small>Rows reviewed</small></div></div>
       </div>
-      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between">
-        <p class="quote-big">“I don’t need more data. I need to know which tower to call about.”</p>
+      <div class="card quote-card">
+        <span class="qmark" aria-hidden="true">“</span>
+        <p class="quote-big">I don’t need more data. I need to know which tower to call about.</p>
         <small>Operator · Chennai NOC · Interview 3</small>
       </div>
     </div>
 
-    <div class="analysis-title"><span class="label"><span class="dot"></span>Quantitative &amp; qualitative analysis</span></div>
+    <div class="analysis-title"><span class="label"><span class="dot"></span>Survey results &amp; interview findings</span></div>
     <div class="charts">
       <article class="chart">
         <div class="in">
-          <h4>Which feature would help you most?</h4><div class="sub">32 responses · multi-select</div>
+          <h4>Which feature would help you most?</h4><div class="sub">32 responses · more than one answer allowed</div>
           <div class="hbar">
-            <div class="row"><div><span>Single fleet health view</span><b>72%</b></div><div class="track"><i style="--w:72%"></i></div></div>
-            <div class="row"><div><span>BTS / cell drill-down</span><b>59%</b></div><div class="track"><i style="--w:59%;background:var(--navy-2)"></i></div></div>
-            <div class="row"><div><span>Safe bulk applet update</span><b>47%</b></div><div class="track"><i style="--w:47%;background:var(--volt)"></i></div></div>
-            <div class="row"><div><span>Threshold alerts</span><b>41%</b></div><div class="track"><i style="--w:41%;background:#6791C5"></i></div></div>
-            <div class="row"><div><span>Ask in plain words (AI)</span><b>28%</b></div><div class="track"><i style="--w:28%;background:#93C5FD"></i></div></div>
+            <div class="row"><div><span>One view of overall device health</span><b>72%</b></div><div class="track"><i style="--w:72%"></i></div></div>
+            <div class="row"><div><span>Drill-down to a network site</span><b>59%</b></div><div class="track"><i style="--w:59%;background:var(--navy-2)"></i></div></div>
+            <div class="row"><div><span>Safe bulk SIM Applet updates</span><b>47%</b></div><div class="track"><i style="--w:47%;background:var(--volt)"></i></div></div>
+            <div class="row"><div><span>Alerts when a set limit is crossed</span><b>41%</b></div><div class="track"><i style="--w:41%;background:#6791C5"></i></div></div>
+            <div class="row"><div><span>Ask questions in plain words (AI)</span><b>28%</b></div><div class="track"><i style="--w:28%;background:#93C5FD"></i></div></div>
           </div>
         </div>
-        <div class="take"><div>A single health view is the top need.</div><div>Drill-down to the cell site is close behind.</div><div>AI queries ship as a preview for now.</div></div>
+        <div class="take"><div>A health overview is the top request.</div><div>Site drill-down is close behind.</div><div>AI is a preview only.</div></div>
       </article>
       <article class="chart">
         <div class="in">
-          <h4>How long does root-cause take?</h4><div class="sub">32 responses · single choice</div>
+          <h4>How long does it take to find the cause of a problem?</h4><div class="sub">32 responses · one answer</div>
           <div class="cols">
             <div><b>9%</b><i style="--h:22%;--c:#93C5FD"></i></div>
             <div><b>31%</b><i style="--h:75%;--c:#6791C5"></i></div>
@@ -178,7 +188,7 @@
           </div>
           <div class="cols-x"><span>&lt;15 min</span><span>15–60 min</span><span>1–2 hrs</span><span>2+ hrs</span></div>
         </div>
-        <div class="take"><div>60% need over an hour to find the cause.</div><div>Only 9% solve it in under 15 minutes.</div><div>Time goes into filtering, not fixing.</div></div>
+        <div class="take"><div>60% need over an hour.</div><div>Only 9% take under 15 minutes.</div><div>Time goes into filtering, not fixing.</div></div>
       </article>
       <article class="chart">
         <div class="in">
@@ -188,17 +198,17 @@
             <div class="legend"><span><i style="background:var(--navy)"></i>NOC operators · 56%</span><span><i style="background:var(--volt)"></i>Network engineers · 25%</span><span><i style="background:#93C5FD"></i>Account managers · 19%</span></div>
           </div>
           <div class="hbar" style="margin-top:22px">
-            <div class="row"><div><span>Biggest pain: manual Excel filtering</span><b>44%</b></div><div class="track"><i style="--w:44%"></i></div></div>
-            <div class="row"><div><span>Mixing up status columns</span><b>22%</b></div><div class="track"><i style="--w:22%;background:var(--volt)"></i></div></div>
+            <div class="row"><div><span>Biggest pain: filtering Excel by hand</span><b>44%</b></div><div class="track"><i style="--w:44%"></i></div></div>
+            <div class="row"><div><span>Confusing the two status columns</span><b>22%</b></div><div class="track"><i style="--w:22%;background:var(--volt)"></i></div></div>
           </div>
         </div>
-        <div class="take"><div>Most users are hands-on operators.</div><div>1 in 5 confuses device and applet status.</div></div>
+        <div class="take"><div>Most are hands-on NOC staff.</div><div>1 in 5 mix up the two statuses.</div></div>
       </article>
     </div>
     <div class="qual">
-      <div class="card"><span class="k">A</span><h3>Alert fatigue</h3><p>Thousands of red rows a day. Without grouping by cell site, one bad BTS looks like 400 separate problems.</p></div>
-      <div class="card"><span class="k">B</span><h3>Spreadsheet dependence</h3><p>The master Excel is the only source of truth, so every question starts by filtering a file too big to open smoothly.</p></div>
-      <div class="card"><span class="k">C</span><h3>Fear of bulk changes</h3><p>A wrong applet push can knock thousands of meters offline, so updates happen in tiny batches, by hand.</p></div>
+      <div class="card"><span class="k">A</span><h3>Too many alerts</h3><p>Without grouping by site, one faulty BTS looks like 400 separate problems.</p></div>
+      <div class="card"><span class="k">B</span><h3>Relying on Excel</h3><p>Every question starts by filtering a file too large to open smoothly.</p></div>
+      <div class="card"><span class="k">C</span><h3>Fear of bulk changes</h3><p>A wrong update can take thousands of meters offline, so teams update by hand in small batches.</p></div>
     </div>
   </div>
 </section>
@@ -206,29 +216,29 @@
 <section class="band" id="market" style="background:var(--panel);border-block:1px solid var(--line)">
   <div class="rail">
     <div class="sec-head">
-      <div><span class="label"><span class="dot"></span>05 — Competitive analysis</span><h2 style="margin-top:20px">How it’s done <em>today.</em></h2></div>
-      <p>Operators juggle three kinds of tools. Each solves a slice; none connects a device fault to the customer it hurts.</p>
+      <div><span class="label"><span class="dot"></span>05 — Competitive analysis</span><h2 style="margin-top:20px">Comparing <em>Existing Tools</em></h2></div>
+      <p>Operators switch between three kinds of tools. Each one handles part of the job, but none of them links a device problem to the customer it affects.</p>
     </div>
     <div class="table-wrap">
       <table class="cmp">
-        <thead><tr><th scope="col">Aspect</th><th scope="col">Excel + manual triage</th><th scope="col">Vendor IoT portals</th><th scope="col">Legacy NMS tools</th><th scope="col" class="us">IoT Observability</th></tr></thead>
+        <thead><tr><th scope="col">Aspect</th><th scope="col">Excel + manual checks</th><th scope="col">Vendor IoT portals</th><th scope="col">Network monitoring tools (NMS)</th><th scope="col" class="us">IoT Device Monitoring</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Focus</th><td>Raw device records</td><td>One device type or vendor</td><td>Network elements, not devices</td><td class="us">Device, applet and network health together</td></tr>
-          <tr><th scope="row">Fault grouping</th><td>None</td><td>Per device</td><td>Per cell site</td><td class="us">Circle → BTS → devices</td></tr>
-          <tr><th scope="row">SIM Applet rollout</th><td>One by one</td><td>Vendor-specific</td><td>Not available</td><td class="us">Bulk, capped at 1,000, confirmed</td></tr>
-          <tr><th scope="row">Customer impact</th><td>Hand-built pivots</td><td>Single customer</td><td>Not available</td><td class="us">All 12 customers, one chart</td></tr>
-          <tr><th scope="row">Scale &amp; speed</th><td>Freezes on large files</td><td>Fast but siloed</td><td>Fast, heavy setup</td><td class="us">100K+ rows, instant filters</td></tr>
-          <tr><th scope="row">Learning curve</th><td>Low, error-prone</td><td>A new login per vendor</td><td>Expert-only</td><td class="us">4-item navigation</td></tr>
+          <tr><th scope="row">Focus</th><td>Raw device records</td><td>One device type or vendor</td><td>Network equipment, not devices</td><td class="us">Device, SIM Applet and network health together</td></tr>
+          <tr><th scope="row">Grouping problems</th><td>None</td><td>Per device</td><td>Per cell site</td><td class="us">Region → network site → devices</td></tr>
+          <tr><th scope="row">SIM Applet updates</th><td>One by one</td><td>Different for each vendor</td><td>Not available</td><td class="us">In bulk, up to 1,000 per session, with confirmation</td></tr>
+          <tr><th scope="row">Affected customers</th><td>Built by hand in pivot tables</td><td>One customer at a time</td><td>Not available</td><td class="us">All 12 customers in one chart</td></tr>
+          <tr><th scope="row">Scale &amp; speed</th><td>Freezes on large files</td><td>Fast, but separate from other tools</td><td>Fast, but complex to set up</td><td class="us">100K+ rows with instant filters</td></tr>
+          <tr><th scope="row">Ease of learning</th><td>Familiar, but error-prone</td><td>A separate login for each vendor</td><td>Built for specialists</td><td class="us">Four main sections in the sidebar</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="analysis-title"><span class="label"><span class="dot"></span>06 — SWOT analysis</span></div>
+    <div class="analysis-title"><span class="label"><span class="dot"></span>06 — SWOT analysis: strengths, weaknesses, opportunities, threats</span></div>
     <div class="swot">
-      <div class="sw s"><span class="L" aria-hidden="true">S</span><h3>Strengths</h3><ul><li>One view for device, applet and network health</li><li>Built on real master data with honest fallbacks</li><li>Virtualized tables keep 100K+ rows fast</li></ul></div>
-      <div class="sw w"><span class="L" aria-hidden="true">W</span><h3>Weaknesses</h3><ul><li>Runs on a sample, not live telemetry</li><li>No backend yet: AI insights are a preview</li><li>Applet rollout is a fixed figure today</li></ul></div>
-      <div class="sw o"><span class="L" aria-hidden="true">O</span><h3>Opportunities</h3><ul><li>Plug in live device streams</li><li>Plain-language questions through an LLM</li><li>Customer-facing views for account teams</li></ul></div>
-      <div class="sw t"><span class="L" aria-hidden="true">T</span><h3>Threats</h3><ul><li>Vendors bundle their own portals</li><li>The spreadsheet habit is hard to break</li><li>1M+ live devices need a stronger backend</li></ul></div>
+      <div class="sw s"><span class="L" aria-hidden="true">S</span><h3>Strengths</h3><ul><li>One view for device, SIM Applet and network health</li><li>Based on the real master file, with clear labels for sample data and preview features</li><li>Optimized tables keep 100K+ rows fast</li></ul></div>
+      <div class="sw w"><span class="L" aria-hidden="true">W</span><h3>Weaknesses</h3><ul><li>Uses a sample dataset, not live data from devices</li><li>No backend yet, so AI insights are a preview only</li><li>The SIM Applet update count is a fixed figure, not connected to live SIM systems</li></ul></div>
+      <div class="sw o"><span class="L" aria-hidden="true">O</span><h3>Opportunities</h3><ul><li>Connect live data from devices</li><li>Let users ask questions in plain language using an AI model</li><li>Add customer-facing views for account teams</li></ul></div>
+      <div class="sw t"><span class="L" aria-hidden="true">T</span><h3>Threats</h3><ul><li>Vendors bundle their own portals with their devices</li><li>Teams are used to working in spreadsheets</li><li>100K+ live devices will need a stronger backend</li></ul></div>
       <div class="hub" aria-hidden="true"><svg width="84" height="84" viewBox="0 0 84 84" fill="none"><circle cx="42" cy="42" r="38" stroke="#1E3A66" stroke-width="2" stroke-dasharray="4 6"/><circle cx="42" cy="4" r="5" fill="#6CB6FF"/><circle cx="80" cy="42" r="4" fill="#93C5FD"/><circle cx="42" cy="80" r="4" fill="#2563EB"/><circle cx="4" cy="42" r="4" fill="#DBEAFE"/><rect x="28" y="28" width="28" height="28" rx="6" stroke="#EAF1FC" stroke-width="2.5"/><rect x="35" y="35" width="14" height="14" rx="2" fill="#6CB6FF"/></svg></div>
     </div>
   </div>
@@ -237,47 +247,65 @@
 <section class="band" id="flows" style="background:var(--panel);border-block:1px solid var(--line)">
   <div class="rail">
     <div class="sec-head">
-      <div><span class="label"><span class="dot"></span>07 — Task flows</span><h2 style="margin-top:20px">Three jobs, <em>mapped end to end.</em></h2></div>
-      <p>The three tasks operators do most, from their first click to done. Each decision point became a guardrail in the UI.</p>
+      <div><span class="label"><span class="dot"></span>07 — Task flows</span><h2 style="margin-top:20px">Three Key <em>User Workflows</em></h2></div>
+      <p>The three most common tasks. Each decision point became a safety check.</p>
     </div>
     <div class="flow-tabs" role="tablist" aria-label="Task flows">
-      <button role="tab" aria-selected="true" data-flow="f1">Diagnose an outage</button>
-      <button role="tab" aria-selected="false" data-flow="f2">Bulk applet update</button>
-      <button role="tab" aria-selected="false" data-flow="f3">Onboard a device</button>
+      <button role="tab" aria-selected="true" data-flow="f1">Investigate a connectivity problem</button>
+      <button role="tab" aria-selected="false" data-flow="f2">Manage SIM Applet updates</button>
+      <button role="tab" aria-selected="false" data-flow="f3">Register a new device</button>
     </div>
     <div class="flow-box">
       <div class="flow-panel" id="f1">
-        <div class="flow"><span class="node start">Start</span><span class="arrow"></span><span class="node">Dashboard shows Out of Reach spike</span><span class="arrow"></span><span class="node">Open Analytics</span><span class="arrow"></span><span class="node">Filter by circle: South</span><span class="arrow"></span><span class="dec"><span>One BTS behind it?</span></span><span class="arrow"><em>yes</em></span><span class="node">Open BTS detail</span><span class="arrow"></span><span class="node">See affected devices &amp; customers</span><span class="arrow"></span><span class="node end">Raise ticket</span></div>
-        <div class="branch"><b>NO →</b> Check Customer Impact and Worst-Performing Devices, then loop back to the circle filter.</div>
+        <div class="flow"><span class="node start">Start</span><span class="arrow"></span><span class="node">Dashboard shows a jump in Out of Reach devices</span><span class="arrow"></span><span class="node">Open Analytics</span><span class="arrow"></span><span class="node">Filter by region: South</span><span class="arrow"></span><span class="dec"><span>One BTS behind it?</span></span><span class="arrow"><em>yes</em></span><span class="node">Open the network site (BTS) details</span><span class="arrow"></span><span class="node">See affected devices &amp; customers</span><span class="arrow"></span><span class="node end">Raise a ticket</span></div>
+        <div class="branch"><b>NO →</b> Check the Customer Impact and Worst-Performing Devices charts, then go back to the region filter.</div>
       </div>
       <div class="flow-panel" id="f2" hidden>
-        <div class="flow"><span class="node start">Start</span><span class="arrow"></span><span class="node">SIM Applet page</span><span class="arrow"></span><span class="node">Devices requiring update</span><span class="arrow"></span><span class="node">Bulk Update</span><span class="arrow"></span><span class="node">Review eligible &amp; compatible</span><span class="arrow"></span><span class="dec"><span>Within 1,000 limit?</span></span><span class="arrow"><em>yes</em></span><span class="node">Confirm target v2.1.0</span><span class="arrow"></span><span class="node end">Update complete</span></div>
-        <div class="branch"><b>NO →</b> The first 1,000 run now; the rest queue for the next session.</div>
+        <div class="flow"><span class="node start">Start</span><span class="arrow"></span><span class="node">SIM Applet page</span><span class="arrow"></span><span class="node">Devices that need an update</span><span class="arrow"></span><span class="node">Bulk update</span><span class="arrow"></span><span class="node">Check eligible &amp; compatible devices</span><span class="arrow"></span><span class="dec"><span>Within the 1,000 limit?</span></span><span class="arrow"><em>yes</em></span><span class="node">Confirm target version v2.1.0</span><span class="arrow"></span><span class="node end">Update complete</span></div>
+        <div class="branch"><b>NO →</b> The first 1,000 devices are updated now; the rest wait for the next session.</div>
       </div>
       <div class="flow-panel" id="f3" hidden>
-        <div class="flow"><span class="node start">Start</span><span class="arrow"></span><span class="node">Devices → Onboarding</span><span class="arrow"></span><span class="node">Choose source</span><span class="arrow"></span><span class="node">Check IMEI, ICCID, OEM model</span><span class="arrow"></span><span class="dec"><span>Data valid?</span></span><span class="arrow"><em>yes</em></span><span class="node">Register &amp; continue</span><span class="arrow"></span><span class="node">Default mapping assigns applet</span><span class="arrow"></span><span class="node end">Device live</span></div>
-        <div class="branch"><b>NO →</b> Fix the source data; conflicting mapping rules go to Conflict Review.</div>
+        <div class="flow"><span class="node start">Start</span><span class="arrow"></span><span class="node">Devices → Onboarding tab</span><span class="arrow"></span><span class="node">Choose a data source</span><span class="arrow"></span><span class="node">Check IMEI, ICCID and device model</span><span class="arrow"></span><span class="dec"><span>Data valid?</span></span><span class="arrow"><em>yes</em></span><span class="node">Register the device</span><span class="arrow"></span><span class="node">SIM Applet configuration assigned automatically</span><span class="arrow"></span><span class="node end">Device ready</span></div>
+        <div class="branch"><b>NO →</b> Fix the source data. If two configuration rules conflict, the device goes to Conflict Review.</div>
       </div>
     </div>
-    <p class="flow-note">Scroll sideways inside the flow on small screens.</p>
+    <div class="lofi-notes" data-flow-notes="f1">
+      <div><b>An example</b><p>If 10,000 devices go offline, the engineer narrows it down: region, then site, then devices and customers.</p></div>
+      <div><b>Circle (region)</b><p>A large service region. The 7 cities sit in 4 circles.</p></div>
+      <div><b>BTS (network site)</b><p>The radio equipment at a cell site. Many failures behind one BTS point to the site.</p></div>
+      <div><b>Device status</b><p><strong>Active:</strong> working. <strong>Degraded:</strong> working poorly. <strong>Out of Reach:</strong> unreachable. <strong>Blacklisted:</strong> blocked.</p></div>
+    </div>
+    <div class="lofi-notes" data-flow-notes="f2" hidden>
+      <div><b>Applet version</b><p>v2.1.0 is the target; 37,088 devices are on older versions.</p></div>
+      <div><b>Eligible devices</b><p>Only devices compatible with the target version can be selected.</p></div>
+      <div><b>Bulk update</b><p>Update many devices in one action, after confirming.</p></div>
+      <div><b>1,000-device limit</b><p>A bad update reaches at most 1,000 devices, not the whole network.</p></div>
+    </div>
+    <div class="lofi-notes" data-flow-notes="f3" hidden>
+      <div><b>IMEI and ICCID</b><p>IMEI identifies the device; ICCID identifies its SIM card.</p></div>
+      <div><b>Data source</b><p>Where new device records come from. Invalid ones go back for fixing.</p></div>
+      <div><b>Automatic configuration</b><p>Default mapping rules give each new device its SIM Applet setup.</p></div>
+      <div><b>Conflicting configurations</b><p>When two rules disagree, a person reviews the device.</p></div>
+    </div>
+    <p class="flow-note">Scroll sideways on small screens. The prototype uses sample data; updates aren’t sent to real SIMs.</p>
   </div>
 </section>
 
 <section class="band" id="ia">
   <div class="rail">
     <div class="sec-head">
-      <div><span class="label"><span class="dot"></span>08 — Information architecture</span><h2 style="margin-top:20px">Four doors, <em>no dead ends.</em></h2></div>
-      <p>I folded seven standalone pages into four sidebar sections with tabs. Old links like /security and /default-mapping redirect to their new homes.</p>
+      <div><span class="label"><span class="dot"></span>08 — Information architecture</span><h2 style="margin-top:20px">Organizing the <em>Dashboard Navigation</em></h2></div>
+      <p>The app started as seven separate pages. I grouped them into four main sections in the sidebar (Dashboard, Devices, SIM Applet and Analytics), with tabs inside each section. Old links such as /security and /default-mapping now redirect to their new place.</p>
     </div>
     <div class="ia">
       <div class="ia-in">
         <span class="ia-node root">Login</span><span class="vline"></span>
-        <span class="ia-node shell">App shell · sidebar + header · dataset loaded once</span>
+        <span class="ia-node shell">Shared layout · sidebar + header · data loaded once</span>
         <div class="ia-cols">
-          <div class="ia-col"><span class="ia-node">Dashboard</span><span class="leaf">KPI cards</span><span class="leaf">Device status distribution</span><span class="leaf">Device type distribution</span><span class="leaf">SIM Applet operations</span><span class="leaf">Security posture</span></div>
-          <div class="ia-col"><span class="ia-node">Devices</span><span class="leaf">IoT devices table<small>search · filter · CSV</small></span><span class="leaf">Onboarding tab</span><span class="leaf">Security tab</span><span class="leaf hl">Device detail<small>info · applet · security · KPIs</small></span></div>
-          <div class="ia-col"><span class="ia-node">SIM Applet</span><span class="leaf">Overview · versions</span><span class="leaf">Devices requiring update</span><span class="leaf hl">Bulk applet update</span><span class="leaf">Default mapping</span><span class="leaf">Conflict review</span></div>
-          <div class="ia-col"><span class="ia-node">Analytics</span><span class="leaf">Airtel IoT analytics<small>9 cards · 4 filters</small></span><span class="leaf hl">Circle → BTS detail</span><span class="leaf">Customer impact drill</span><span class="leaf">AI-powered insights</span></div>
+          <div class="ia-col"><span class="ia-node">Dashboard</span><span class="leaf">Summary cards</span><span class="leaf">Device status breakdown</span><span class="leaf">Device type breakdown</span><span class="leaf">SIM Applet summary</span><span class="leaf">Security status</span></div>
+          <div class="ia-col"><span class="ia-node">Devices</span><span class="leaf">All devices table<small>search · filter · export to CSV</small></span><span class="leaf">Onboarding tab</span><span class="leaf">Security tab</span><span class="leaf hl">Device details<small>info · SIM Applet · security · network data</small></span></div>
+          <div class="ia-col"><span class="ia-node">SIM Applet</span><span class="leaf">Overview · versions</span><span class="leaf">Devices that need an update</span><span class="leaf hl">Bulk SIM Applet update</span><span class="leaf">Automatic configuration<small>default mapping</small></span><span class="leaf">Review conflicting configurations</span></div>
+          <div class="ia-col"><span class="ia-node">Analytics</span><span class="leaf">Airtel IoT analytics<small>9 charts · 4 filters</small></span><span class="leaf hl">Region → network site details</span><span class="leaf">Affected customers</span><span class="leaf">AI insights (preview)</span></div>
         </div>
       </div>
     </div>
@@ -287,18 +315,18 @@
 <section class="band" id="wireframes" style="background:var(--panel);border-block:1px solid var(--line)">
   <div class="rail">
     <div class="sec-head">
-      <div><span class="label"><span class="dot"></span>09 — Low → high fidelity</span><h2 style="margin-top:20px">From paper <em>to pixels.</em></h2></div>
-      <p>Every screen started as a pen sketch, then became a greyscale high-fidelity wireframe with real labels and layout before any color. Pick a screen to compare the two.</p>
+      <div><span class="label"><span class="dot"></span>09 — Wireframes &amp; design evolution</span><h2 style="margin-top:20px">From Sketches to <em>Final Designs</em></h2></div>
+      <p>Pen sketch first, then a grey wireframe with real labels, then color. Pick a screen to compare.</p>
     </div>
     <div class="flow-tabs" role="tablist" aria-label="Sketch and wireframe">
       <button role="tab" aria-selected="true" data-fid="0">Analytics</button>
-      <button role="tab" aria-selected="false" data-fid="1">Device detail</button>
+      <button role="tab" aria-selected="false" data-fid="1">Device details</button>
       <button role="tab" aria-selected="false" data-fid="2">Bulk update</button>
-      <button role="tab" aria-selected="false" data-fid="3">Circle distribution</button>
+      <button role="tab" aria-selected="false" data-fid="3">Devices by region</button>
     </div>
 
     <div class="fid" data-fid-panel="0">
-      <figure class="fid-sketch"><img src="assets/sketches/analytics.jpg" alt="Pen sketch of the analytics page: sidebar, filter bar for customers, location and time, and a grid of chart cards with download icons" loading="lazy"><span class="fid-tag">LOW FIDELITY · SKETCH</span></figure>
+      <figure class="fid-sketch"><img src="assets/sketches/analytics.jpg" alt="Pen sketch of the analytics page: sidebar, filter bar for customers, location and time, and a grid of chart cards with download icons" loading="lazy"><span class="fid-tag">SKETCH · BASIC LAYOUT</span></figure>
       <figure class="fid-wire"><div class="hw" aria-hidden="true"><div class="hw-in">
         <aside class="hw-sb"><b class="hw-logo">IoT NOC</b><span>Dashboard</span><span>Devices</span><span>SIM Applet</span><span class="on">Analytics</span><span class="hw-live"><i></i>Live update</span></aside>
         <div class="hw-main">
@@ -316,17 +344,17 @@
             <div class="hw-card"><div class="hw-ch">Alerts by hour<u></u></div><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M4 40V30h6v10M14 40V26h6v14M24 40V32h6v8M34 40V14h6v26M44 40V20h6v20M54 40V28h6v12M64 40V18h6v22M74 40V34h6v6M84 40V24h6v16M94 40V30h6v10"/></svg></div>
           </div>
         </div>
-      </div></div><span class="fid-tag dark">HIGH FIDELITY · WIREFRAME</span></figure>
+      </div></div><span class="fid-tag dark">WIREFRAME · DETAILED LAYOUT</span></figure>
       <div class="lofi-notes">
-        <div><b>Filters above everything</b><p>Customer, device type, location and time sit on top, so one change updates every card.</p></div>
-        <div><b>Nine cards, one grid</b><p>Each card answers one question, in a chart picked for that data.</p></div>
-        <div><b>Download on each card</b><p>Every card exports its own live data, with no trip to a reports page.</p></div>
-        <div><b>Live update in reach</b><p>The sidebar footer shows when data last refreshed.</p></div>
+        <div><b>Filters at the top</b><p>One change updates every chart.</p></div>
+        <div><b>Nine cards, one grid</b><p>Each card answers one question.</p></div>
+        <div><b>Download on every card</b><p>No separate reports page needed.</p></div>
+        <div><b>Last refresh in view</b><p>The sidebar shows when data last refreshed.</p></div>
       </div>
     </div>
 
     <div class="fid" data-fid-panel="1" hidden>
-      <figure class="fid-sketch"><img src="assets/sketches/device-detail.jpg" alt="Pen sketch of the device detail page: device name and config, SIM applet details, network issue, data security and a network KPI snapshot" loading="lazy"><span class="fid-tag">LOW FIDELITY · SKETCH</span></figure>
+      <figure class="fid-sketch"><img src="assets/sketches/device-detail.jpg" alt="Pen sketch of the device details page: device name and configuration, SIM Applet details, network issue, data security and a network data snapshot" loading="lazy"><span class="fid-tag">SKETCH · BASIC LAYOUT</span></figure>
       <figure class="fid-wire"><div class="hw" aria-hidden="true"><div class="hw-in">
         <aside class="hw-sb"><b class="hw-logo">IoT NOC</b><span>Dashboard</span><span class="on">Devices</span><span>SIM Applet</span><span>Analytics</span><span class="hw-live"><i></i>Live update</span></aside>
         <div class="hw-main">
@@ -345,17 +373,17 @@
             </div>
           </div>
         </div>
-      </div></div><span class="fid-tag dark">HIGH FIDELITY · WIREFRAME</span></figure>
+      </div></div><span class="fid-tag dark">WIREFRAME · DETAILED LAYOUT</span></figure>
       <div class="lofi-notes">
-        <div><b>Name first</b><p>Every support call starts with “which device?”, so its name and config lead the page.</p></div>
-        <div><b>Applet beside network</b><p>Version and network health sit side by side, so a failed update is easy to tell apart from bad signal.</p></div>
-        <div><b>Issues in their own rows</b><p>Network issue and data security get one row each, which stays calm when there is nothing to report.</p></div>
-        <div><b>A way back</b><p>“Back to dashboard” stays top right, so a deep dive never strands the operator.</p></div>
+        <div><b>Device name first</b><p>Support calls start with “which device?”</p></div>
+        <div><b>SIM Applet next to network</b><p>Tells a failed update apart from poor signal: RSRP (strength), RSRQ (quality), SINR (interference).</p></div>
+        <div><b>One row per issue</b><p>Stays quiet when there’s nothing to report.</p></div>
+        <div><b>An easy way back</b><p>“Back to dashboard” is always top right.</p></div>
       </div>
     </div>
 
     <div class="fid" data-fid-panel="2" hidden>
-      <figure class="fid-sketch"><img src="assets/sketches/bulk-update.jpg" alt="Pen sketch of bulk update processing: a list of devices requiring an applet update with an update button per row, and a modal with eligible and selected devices" loading="lazy"><span class="fid-tag">LOW FIDELITY · SKETCH</span></figure>
+      <figure class="fid-sketch"><img src="assets/sketches/bulk-update.jpg" alt="Pen sketch of bulk update processing: a list of devices that need a SIM Applet update with an update button per row, and a pop-up with eligible and selected devices" loading="lazy"><span class="fid-tag">SKETCH · BASIC LAYOUT</span></figure>
       <figure class="fid-wire"><div class="hw" aria-hidden="true"><div class="hw-in">
         <aside class="hw-sb"><b class="hw-logo">IoT NOC</b><span>Dashboard</span><span>Devices</span><span class="on">SIM Applet</span><span>Analytics</span><span class="hw-live"><i></i>Live update</span></aside>
         <div class="hw-main">
@@ -377,17 +405,17 @@
             <div class="hw-actions"><span class="hw-btn ghost">Cancel</span><span class="hw-btn">Update 240</span></div>
           </div>
         </div>
-      </div></div><span class="fid-tag dark">HIGH FIDELITY · WIREFRAME</span></figure>
+      </div></div><span class="fid-tag dark">WIREFRAME · DETAILED LAYOUT</span></figure>
       <div class="lofi-notes">
-        <div><b>List before action</b><p>Device, ID and customer come first, so operators see what they are about to touch.</p></div>
-        <div><b>One or many</b><p>Each row has its own Update button, and “Bulk update” sits top right for the whole selection.</p></div>
-        <div><b>Confirm in a modal</b><p>Eligible and selected counts are shown before anything is pushed to a device.</p></div>
-        <div><b>Capped by design</b><p>At most 1,000 devices per session, so a bad build can’t reach the whole fleet.</p></div>
+        <div><b>See the list first</b><p>Device, ID and customer before any action.</p></div>
+        <div><b>One or many</b><p>Update one row, or everything selected.</p></div>
+        <div><b>Confirm in a pop-up</b><p>Shows eligible and selected counts first.</p></div>
+        <div><b>Limited by design</b><p>Max 1,000 devices per session.</p></div>
       </div>
     </div>
 
     <div class="fid" data-fid-panel="3" hidden>
-      <figure class="fid-sketch"><img src="assets/sketches/circle-distribution.jpg" alt="Pen sketch of circle-wise customer distribution: Delhi north, Mumbai and Pune west, Kolkata east, Chennai, Bengaluru and Hyderabad south" loading="lazy"><span class="fid-tag">LOW FIDELITY · SKETCH</span></figure>
+      <figure class="fid-sketch"><img src="assets/sketches/circle-distribution.jpg" alt="Pen sketch of customers by region: Delhi in the north, Mumbai and Pune in the west, Kolkata in the east, and Chennai, Bengaluru and Hyderabad in the south" loading="lazy"><span class="fid-tag">SKETCH · BASIC LAYOUT</span></figure>
       <figure class="fid-wire"><div class="hw" aria-hidden="true"><div class="hw-in">
         <aside class="hw-sb"><b class="hw-logo">IoT NOC</b><span>Dashboard</span><span>Devices</span><span>SIM Applet</span><span class="on">Analytics</span><span class="hw-live"><i></i>Live update</span></aside>
         <div class="hw-main">
@@ -403,16 +431,16 @@
             <div class="hw-box hw-legend"><h6>Customers by circle</h6><div class="hw-hb"><i style="width:88%"></i><i style="width:64%"></i><i style="width:46%"></i><i style="width:28%"></i></div><small>Click a circle to drill into its BTS sites</small></div>
           </div>
         </div>
-      </div></div><span class="fid-tag dark">HIGH FIDELITY · WIREFRAME</span></figure>
+      </div></div><span class="fid-tag dark">WIREFRAME · DETAILED LAYOUT</span></figure>
       <div class="lofi-notes">
-        <div><b>Read it like a map</b><p>Seven cities sit in Airtel’s four circles, laid out north, south, east and west.</p></div>
-        <div><b>Circle, then city</b><p>Each node names its circle first and its cities second, matching how the NOC talks.</p></div>
-        <div><b>Counts beside the map</b><p>A ranked list gives exact numbers where the compass only gives position.</p></div>
-        <div><b>Room to drill down</b><p>This sketch became the circle → BTS drill-down in the shipped Analytics screen.</p></div>
+        <div><b>Read it like a map</b><p>7 cities in 4 circles: North, South, East, West.</p></div>
+        <div><b>Region, then city</b><p>Matches how NOC teams talk.</p></div>
+        <div><b>Exact numbers beside the map</b><p>A ranked list gives exact counts.</p></div>
+        <div><b>Ready to drill down</b><p>Became the region → site drill-down in Analytics.</p></div>
       </div>
     </div>
 
-    <div class="analysis-title" style="margin-top:72px"><span class="label"><span class="dot"></span>10 — High-fidelity screens</span></div>
+    <div class="analysis-title" style="margin-top:72px"><span class="label"><span class="dot"></span>10 — Final UI screens</span></div>
     <div class="hifi">
       <div class="screens" role="tablist" aria-label="Screens">
         <button role="tab" aria-selected="true" data-shot="0"><span>01</span>Login<i class="tick"></i></button>
@@ -425,11 +453,11 @@
         <div class="browser">
           <div class="bar"><i></i><i></i><i></i><span class="url" id="shotUrl">iot-dashboard-snowy.vercel.app/#/login</span></div>
           <div class="shot" id="shots">
-            <img class="on" src="assets/login.jpg" alt="Login screen with circuit background">
-            <img src="assets/dashboard.jpg" alt="Dashboard screen">
-            <img src="assets/devices.jpg" alt="Devices screen">
-            <img src="assets/simapplet.jpg" alt="SIM Applet management screen">
-            <img src="assets/analytics.jpg" alt="Analytics screen">
+            <img class="on" src="assets/login.jpg" alt="Login screen with a circuit-board background">
+            <img src="assets/dashboard.jpg" alt="Dashboard screen with summary cards, device status and device type charts">
+            <img src="assets/devices.jpg" alt="Devices screen with a searchable table of all devices">
+            <img src="assets/simapplet.jpg" alt="SIM Applet screen showing versions and devices that need an update">
+            <img src="assets/analytics.jpg" alt="Analytics screen with filters and nine chart cards">
           </div>
         </div>
         <div class="callouts" id="callouts"></div>
@@ -441,24 +469,24 @@
 <section class="band" id="ui">
   <div class="rail">
     <div class="sec-head">
-      <div><span class="label"><span class="dot"></span>11 — Visual system</span><h2 style="margin-top:20px">Calm by default, <em>loud when it matters.</em></h2></div>
-      <p>Navy and blue carry the interface. Red, amber and green are kept for status only, so a chart segment is never mistaken for an alert. Tap a swatch to copy its hex.</p>
+      <div><span class="label"><span class="dot"></span>11 — Visual design system</span><h2 style="margin-top:20px">Visual Design and <em>Status Indicators</em></h2></div>
+      <p>Navy and blue for the interface. Red, amber and green only for status. Click a color to copy it.</p>
     </div>
     <div class="vs">
       <div class="card">
         <div class="swatches">
           <button class="sw-c" style="background:#102A54;color:#fff" data-hex="#102A54"><b>Primary navy</b><span>#102A54</span></button>
           <button class="sw-c" style="background:#17356B;color:#fff" data-hex="#17356B"><b>Secondary navy</b><span>#17356B</span></button>
-          <button class="sw-c" style="background:#32B57A;color:#04140D" data-hex="#32B57A"><b>Signal green</b><span>#32B57A</span></button>
-          <button class="sw-c" style="background:#2563EB;color:#fff" data-hex="#2563EB"><b>Volt blue</b><span>#2563EB</span></button>
-          <button class="sw-c" style="background:#93C5FD;color:#102A54" data-hex="#93C5FD"><b>Ice blue</b><span>#93C5FD</span></button>
-          <button class="sw-c" style="background:#DC2626;color:#fff" data-hex="#DC2626"><b>Critical</b><span>#DC2626</span></button>
+          <button class="sw-c" style="background:#32B57A;color:#04140D" data-hex="#32B57A"><b>Active green</b><span>#32B57A</span></button>
+          <button class="sw-c" style="background:#2563EB;color:#fff" data-hex="#2563EB"><b>Bright blue</b><span>#2563EB</span></button>
+          <button class="sw-c" style="background:#93C5FD;color:#102A54" data-hex="#93C5FD"><b>Light blue</b><span>#93C5FD</span></button>
+          <button class="sw-c" style="background:#DC2626;color:#fff" data-hex="#DC2626"><b>Critical red</b><span>#DC2626</span></button>
         </div>
       </div>
       <div class="card type-spec">
-        <span class="label">Product type · Inter</span>
+        <span class="label">Product font · Inter</span>
         <div class="aa" style="font-family:Inter,var(--f-body)">Aa</div>
-        <p style="color:#C4D3EA">8.25 → 16.5px scale, set at 0.75× the desktop spec so operators see more rows without scrolling.</p>
+        <p style="color:#C4D3EA">8.25–16.5px, set at 75% scale so more rows fit on screen.</p>
         <div class="comp">
           <span class="badge" style="background:rgba(50,181,122,.16);color:#5ED19B">● Active</span>
           <span class="badge" style="background:rgba(217,119,6,.18);color:#F0A63C">● Degraded</span>
@@ -471,21 +499,29 @@
           <div class="kpi" style="--c:#B906D9"><small>Applet update</small><b data-count="37088">37,088</b></div>
           <div class="kpi" style="--c:#DC2626"><small>Blacklisted</small><b data-count="702">702</b></div>
         </div>
+        <p style="color:#C4D3EA">Reusable badges and cards; each card’s colored line matches its status.</p>
       </div>
     </div>
 
-    <div class="analysis-title" style="margin-top:72px"><span class="label"><span class="dot"></span>12 — Outcome &amp; learnings</span></div>
+    <div class="analysis-title" style="margin-top:72px"><span class="label"><span class="dot"></span>12 — Outcomes &amp; learnings</span></div>
     <div class="out-grid">
-      <div class="tile"><div class="big">3</div><p class="cap">clicks from a spike to the failing BTS</p></div>
-      <div class="tile"><div class="big">0.003<span style="font-size:.4em">pp</span></div><p class="cap">max drift in customer share after the 1M → 100K reduction</p></div>
-      <div class="tile"><div class="big">1,000</div><p class="cap">devices per bulk session, previewed and confirmed</p></div>
+      <div class="tile"><div class="big">3</div><p class="cap">clicks from an outage spike to the faulty site (prototype)</p></div>
+      <div class="tile"><div class="big">4</div><p class="cap">sidebar sections, down from 7 separate pages</p></div>
+      <div class="tile"><div class="big">1,000</div><p class="cap">devices max per bulk update, with confirmation</p></div>
       <div class="tile"><div class="big">3</div><p class="cap">runtime libraries: React, React DOM, React Router</p></div>
     </div>
-    <div class="learn">
-      <div class="card"><h3><span>01</span>Design the data before the UI</h3><p>Profiling the columns first told me which charts mattered and which filters operators really need.</p></div>
-      <div class="card"><h3><span>02</span>Honesty is a feature</h3><p>A red “sample data” banner and an “AI not connected yet” note build more trust than a polished fake.</p></div>
-      <div class="card"><h3><span>03</span>Give color one job</h3><p>Keeping red, amber and green for status made alerts readable at a glance.</p></div>
-      <div class="card"><h3><span>04</span>Performance is UX</h3><p>Virtualized rows and page-sized scans are why 100K records feel instant.</p></div>
+    <p class="flow-note">Prototype figures, not live measurements.</p>
+    <div class="lofi-notes" style="margin-top:28px">
+      <div><b>Navigation</b><p>7 pages became 4 sections.</p></div>
+      <div><b>Device visibility</b><p>All 100,114 devices on one dashboard.</p></div>
+      <div><b>Workflows</b><p>Three step-by-step flows with safety checks.</p></div>
+      <div><b>Performance</b><p>Only visible rows are drawn, so 100K stays fast.</p></div>
+    </div>
+    <div class="learn" style="margin-top:28px">
+      <div class="card"><h3><span>01</span>Understand the data before designing</h3><p>Reviewing the columns first showed which charts and filters mattered.</p></div>
+      <div class="card"><h3><span>02</span>Be clear about what isn’t finished</h3><p>Labeling sample data and the unconnected AI builds more trust than faking it.</p></div>
+      <div class="card"><h3><span>03</span>Give each color one job</h3><p>Status-only red, amber and green makes alerts easy to spot.</p></div>
+      <div class="card"><h3><span>04</span>Speed is part of the experience</h3><p>Drawing only visible rows makes 100K records feel instant.</p></div>
     </div>
   </div>
 </section>
@@ -493,7 +529,7 @@
 <footer class="band thanks">
   <div class="rail">
     <div class="row">
-      <div><span class="label" style="color:var(--signal-ink)">End of transmission</span><h2 style="margin-top:20px">Thank<br>you.</h2><p>Every device online, every update safe, every number true.</p></div>
+      <div><span class="label" style="color:var(--signal-ink)">End of case study</span><h2 style="margin-top:20px">Thank<br>you.</h2><p>Try the live prototype, or see more of my work in my portfolio.</p></div>
       <div class="hero-ctas"><a class="btn solid" href="https://iot-dashboard-snowy.vercel.app/#/login" target="_blank" rel="noopener">Open live demo ↗</a><a class="btn" href="https://akash-portfolio-two-blue.vercel.app/" target="_blank" rel="noopener">Portfolio ↗</a></div>
     </div>
     <div class="foot"><span>Designed &amp; built by Akash Ganapathy</span><span>Chennai, India · 2026</span></div>

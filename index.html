@@ -73,7 +73,7 @@
         <h3>The context</h3>
         <p>Airtel’s IoT Network Operations Center (NOC), through TierOne. Engineers look after devices for 12 enterprise customers in 7 cities. When devices stop reporting, they need to know why and who is affected.</p>
 
-        <h3>How it worked before</h3>
+        <h3>Observed problem</h3>
         <p>Everything lived in one master file: 100,114 rows, 22 columns. Engineers filtered and pivoted it by hand to answer simple questions.</p>
         <p>One faulty cell site showed up as hundreds of rows, and two similar status columns were easy to mix up.</p>
 
@@ -90,6 +90,7 @@
       </div>
 
       <dl class="facts">
+        <div><dt>Duration</dt><dd>8 months</dd></div>
         <div><dt>Role</dt><dd>UI/UX design and frontend development</dd></div>
         <div><dt>Tools</dt><dd>Figma, React, TypeScript</dd></div>
         <div><dt>Dataset</dt><dd>100,114 devices, 22 fields each</dd></div>
@@ -113,6 +114,48 @@
       <div><b>SIM Applet</b><p>A small program on the SIM card, updated remotely by the operator.</p></div>
       <div><b>Circle → BTS → device</b><p>A circle is a region. A BTS is the cell-site radio equipment devices connect to.</p></div>
       <div><b>Device status</b><p>Active, Degraded, Out of Reach (unreachable) or Blacklisted (blocked).</p></div>
+    </div>
+
+    <div class="analysis-title" style="margin-top:72px"><span class="label"><span class="dot"></span>From sketch to screen</span></div>
+
+    <div class="iter">
+      <figure class="iter-sketch"><img src="assets/sketches/analytics.jpg" alt="Pen sketch of the analytics page: sidebar, filter bar for customers, location and time, and a grid of chart cards with download icons" loading="lazy"><figcaption>Analytics · pen sketch</figcaption></figure>
+      <div class="iter-notes">
+        <h4>Analytics</h4>
+        <p><b>Filters at the top:</b> one change updates every chart.</p>
+        <p><b>Nine cards, one grid:</b> each card answers one question, with a download on every card, so no separate reports page is needed.</p>
+        <p><b>Last refresh in view:</b> the sidebar shows when the data last refreshed.</p>
+      </div>
+    </div>
+
+    <div class="iter">
+      <figure class="iter-sketch"><img src="assets/sketches/device-detail.jpg" alt="Pen sketch of the device details page: device name and configuration, SIM Applet details, network issue, data security and a network data snapshot" loading="lazy"><figcaption>Device details · pen sketch</figcaption></figure>
+      <div class="iter-notes">
+        <h4>Device details</h4>
+        <p><b>Device name first:</b> support calls start with “which device?”</p>
+        <p><b>SIM Applet next to network:</b> tells a failed update apart from poor signal (RSRP, RSRQ, SINR).</p>
+        <p><b>One row per issue:</b> stays quiet when there’s nothing to report, with an easy way back to the dashboard.</p>
+      </div>
+    </div>
+
+    <div class="iter">
+      <figure class="iter-sketch"><img src="assets/sketches/bulk-update.jpg" alt="Pen sketch of bulk update processing: a list of devices that need a SIM Applet update with an update button per row, and a pop-up with eligible and selected devices" loading="lazy"><figcaption>Bulk update · pen sketch</figcaption></figure>
+      <div class="iter-notes">
+        <h4>Bulk update</h4>
+        <p><b>See the list first:</b> device, ID and customer before any action.</p>
+        <p><b>One or many:</b> update one row, or everything selected.</p>
+        <p><b>Confirm in a pop-up:</b> shows eligible and selected counts first, capped at 1,000 devices per session.</p>
+      </div>
+    </div>
+
+    <div class="iter">
+      <figure class="iter-sketch"><img src="assets/sketches/circle-distribution.jpg" alt="Pen sketch of customers by region: Delhi in the north, Mumbai and Pune in the west, Kolkata in the east, and Chennai, Bengaluru and Hyderabad in the south" loading="lazy"><figcaption>Devices by region · pen sketch</figcaption></figure>
+      <div class="iter-notes">
+        <h4>Devices by region</h4>
+        <p><b>Read it like a map:</b> 7 cities in 4 circles, North, South, East and West, matching how NOC teams talk.</p>
+        <p><b>Exact numbers beside the map:</b> a ranked list gives exact counts.</p>
+        <p><b>Ready to drill down:</b> this became the region → site drill-down in Analytics.</p>
+      </div>
     </div>
   </div>
 </section>

@@ -27,4 +27,4 @@ src/main.js         animations and interactions (GSAP + ScrollTrigger)
 public/assets/      dashboard screenshots
 ```
 
-Research figures, personas and quotes are illustrative placeholders.
+Survey figures come from a November 2026 Google Forms survey (8 respondents), presented as retrospective, exploratory research. There are no invented quotes or personas.

@@ -119,42 +119,42 @@
     <div class="analysis-title" style="margin-top:72px"><span class="label"><span class="dot"></span>From sketch to screen</span></div>
 
     <div class="iter">
-      <figure class="iter-sketch"><img src="assets/sketches/analytics.jpg" alt="Pen sketch of the analytics page: sidebar, filter bar for customers, location and time, and a grid of chart cards with download icons" loading="lazy"><figcaption>Analytics · pen sketch</figcaption></figure>
+      <figure class="iter-sketch"><img src="assets/sketches/iot-ecosystem.jpg" alt="Whiteboard map of the IoT ecosystem: smart meters, soundboxes, vehicle trackers and connected cars, each linked to example customers, flowing into the SIM Applet, then cell towers (BTS), then the ISP service provider" loading="lazy"><figcaption>IoT ecosystem · whiteboard</figcaption></figure>
       <div class="iter-notes">
-        <h4>Analytics</h4>
-        <p><b>Filters at the top:</b> one change updates every chart.</p>
-        <p><b>Nine cards, one grid:</b> each card answers one question, with a download on every card, so no separate reports page is needed.</p>
-        <p><b>Last refresh in view:</b> the sidebar shows when the data last refreshed.</p>
+        <h4>Mapping the ecosystem</h4>
+        <p><b>Who sends data:</b> smart meters, soundboxes, vehicle trackers and connected cars.</p>
+        <p><b>The signal path:</b> device → SIM Applet → BTS → service provider.</p>
+        <p><b>Why it mattered:</b> customer, SIM Applet and BTS became the core filters.</p>
       </div>
     </div>
 
     <div class="iter">
-      <figure class="iter-sketch"><img src="assets/sketches/device-detail.jpg" alt="Pen sketch of the device details page: device name and configuration, SIM Applet details, network issue, data security and a network data snapshot" loading="lazy"><figcaption>Device details · pen sketch</figcaption></figure>
+      <figure class="iter-sketch"><img src="assets/sketches/user-flows.jpg" alt="Pen flowcharts for two tasks: diagnosing an outage (dashboard spike, open analytics, filter by circle, check for one BTS, open BTS details, see affected devices and customers, raise ticket) and onboarding a device (choose source, check IMEI, ICCID and OEM model, validate data, register, default mapping assigns applet, device live)" loading="lazy"><figcaption>Key user flows · pen sketch</figcaption></figure>
       <div class="iter-notes">
-        <h4>Device details</h4>
-        <p><b>Device name first:</b> support calls start with “which device?”</p>
-        <p><b>SIM Applet next to network:</b> tells a failed update apart from poor signal (RSRP, RSRQ, SINR).</p>
-        <p><b>One row per issue:</b> stays quiet when there’s nothing to report, with an easy way back to the dashboard.</p>
+        <h4>Two key flows</h4>
+        <p><b>Diagnose an outage:</b> spike on the dashboard → filter by circle → find the BTS → raise a ticket.</p>
+        <p><b>Onboard a device:</b> check IMEI, ICCID and model → register → SIM Applet assigned → live.</p>
+        <p><b>What it changed:</b> the dashboard links straight into Analytics and BTS details.</p>
       </div>
     </div>
 
     <div class="iter">
-      <figure class="iter-sketch"><img src="assets/sketches/bulk-update.jpg" alt="Pen sketch of bulk update processing: a list of devices that need a SIM Applet update with an update button per row, and a pop-up with eligible and selected devices" loading="lazy"><figcaption>Bulk update · pen sketch</figcaption></figure>
+      <figure class="iter-sketch"><img src="assets/sketches/bulk-update-flow.jpg" alt="Whiteboard task flow for bulk update: SIM Applet operations, view list, search and filter, select devices, click bulk update, validate records, show errors or review changes, confirm, bulk update processed" loading="lazy"><figcaption>Bulk update task flow · whiteboard</figcaption></figure>
       <div class="iter-notes">
-        <h4>Bulk update</h4>
-        <p><b>See the list first:</b> device, ID and customer before any action.</p>
-        <p><b>One or many:</b> update one row, or everything selected.</p>
-        <p><b>Confirm in a pop-up:</b> shows eligible and selected counts first, capped at 1,000 devices per session.</p>
+        <h4>Bulk update flow</h4>
+        <p><b>Find first:</b> filter the SIM Applet list and select devices.</p>
+        <p><b>Validate first:</b> errors send you back to fix fields, not to the start.</p>
+        <p><b>Review, then confirm:</b> no mass update is one misclick away.</p>
       </div>
     </div>
 
     <div class="iter">
-      <figure class="iter-sketch"><img src="assets/sketches/circle-distribution.jpg" alt="Pen sketch of customers by region: Delhi in the north, Mumbai and Pune in the west, Kolkata in the east, and Chennai, Bengaluru and Hyderabad in the south" loading="lazy"><figcaption>Devices by region · pen sketch</figcaption></figure>
+      <figure class="iter-sketch"><img src="assets/sketches/wireframes.jpg" alt="Pen wireframes: the analytics page with a sidebar, filters for customer, location and time and a grid of chart cards; the bulk update screen with a device list and a confirmation pop-up; the device details page with SIM Applet details, network issue, data security and a network KPI snapshot; and a map of customers by circle" loading="lazy"><figcaption>Screen wireframes · pen sketch</figcaption></figure>
       <div class="iter-notes">
-        <h4>Devices by region</h4>
-        <p><b>Read it like a map:</b> 7 cities in 4 circles, North, South, East and West, matching how NOC teams talk.</p>
-        <p><b>Exact numbers beside the map:</b> a ranked list gives exact counts.</p>
-        <p><b>Ready to drill down:</b> this became the region → site drill-down in Analytics.</p>
+        <h4>Flows into screens</h4>
+        <p><b>Analytics:</b> one filter bar drives a grid of downloadable chart cards.</p>
+        <p><b>Device details:</b> SIM Applet beside network issues and KPIs.</p>
+        <p><b>Devices by circle:</b> North, South, East, West, matching how NOC teams talk.</p>
       </div>
     </div>
   </div>
